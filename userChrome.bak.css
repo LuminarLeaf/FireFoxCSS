@@ -1,0 +1,198 @@
+/*** Remove items from image context menu ***/
+
+/* Email Image... */
+#context-sendimage, 
+
+/* Set Image as Desktop Background... (and preceding separator) */
+#context-sep-setbackground, #context-setDesktopBackground,
+
+/* Inspect Accessibility Properties */
+#context-inspect-a11y {
+    display: none !important;
+}
+
+/* Custom Code: */
+
+/* @import url("autohide_sidebar.css"); */
+
+#main-window #titlebar {
+    overflow: hidden;
+    transition: height 0.3s 0.3s !important;
+}
+/* Default state: Set initial height to enable animation */
+#main-window #titlebar {
+    height: 3em !important;
+}
+#main-window[uidensity="touch"] #titlebar {
+    height: 3.35em !important;
+}
+#main-window[uidensity="compact"] #titlebar {
+    height: 2.7em !important;
+}
+/* Hidden state: Hide native tabs strip */
+#main-window[titlepreface*="[S]"] #titlebar {
+    height:   0 !important;
+}
+/* Hidden state: Fix z-index of active pinned tabs */
+#main-window[titlepreface*="[S]"] #tabbrowser-tabs {
+    z-index: 0 !important;
+}
+
+/* End of Custom Code */
+
+/*  Gale For Firefox  */
+
+@import url("darkTheme.css");
+@import url("private.css");
+
+/* --- TAB AND TITLE BAR --- */
+
+/* #TabsToolbar {
+    display: none !important;
+    height: 0 !important;
+}
+*/
+
+.content-header {
+    background: var(--gg-bg) !important;
+}
+
+.content-scrollable {
+    background: var(--gg-black) !important;
+}
+
+/* --- SIDEBAR --- */
+
+#sidebar-header {
+    display: none !important;
+    border-bottom: none !important;
+    border: none !important;
+    background-color: var(--gg-bg) !important;
+    border-inline-color: var(--gg-bg);
+}
+
+#sidebar-box {
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
+}
+
+#sidebar-box[positionend] {
+    direction: rtl;
+}
+
+#sidebar-box[positionend] > * {
+    direction: ltr;
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) {
+    direction: ltr;
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
+    direction: rtl;
+}
+
+.sidebar-panel {
+    background: var(--gg-bg) !important;
+}
+
+.sidebar-panel[lwt-sidebar] {
+    background: var(--gg-bg);
+}
+
+#sidebar-icon {
+    filter: contrast(150%);
+    opacity: 1;
+}
+
+/* for sidebars placed to the left (default) */
+.sidebar-placesTree {
+    border-top-right-radius: 6px;
+    background: var(--gg-black) !important;
+    color: #d4d4d4 !important;
+}
+
+.sidebar-placesTree:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 45px;
+    right: 0;
+    background: var(--gg-bg);
+}
+
+/* for sidebars placed to the right */
+/*
+.sidebar-placesTree {
+	border-top-left-radius: 6px;
+	background: var(--gg-black) !important;
+	color: #d4d4d4 !important;
+}
+
+.sidebar-placesTree:before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	top: 45px;
+	left: 0;
+}
+*/
+
+#sidebar-title {
+    font-size: 1.1rem;
+}
+
+#sidebar-close {
+    opacity: 0;
+}
+
+#sidebar-close:hover {
+    opacity: 1;
+}
+
+#historyTree .sidebar-placesTreechildren {
+    margin-left: -8px;
+}
+
+#sidebar-splitter {
+    width: 0px !important;
+    border: 2px solid var(--gg-bg) !important;
+}
+
+/* Add outline border */
+#sidebar,
+#sidebar-header {
+    border-inline-width: 0px 4px;
+}
+
+#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
+#sidebar-box[positionend] > * {
+    border-inline-width: 4px 0px;
+}
+
+#appcontent {
+    margin-top: -1px;
+}
+
+/* hide on fullscreen */
+#main-window[sizemode="fullscreen"] #sidebar-box,
+#main-window[sizemode="fullscreen"] #sidebar-splitter {
+    /* match the transition from the toolbar;
+    swap to margin-right if you use the sidebar to the right */
+	transition: .8s margin-left ease-out !important;
+    /* modify the size if you use a custom one */
+    /* display: none !important; */
+}
+
+#search-box {
+    appearance: none !important;
+    border-radius: 5px !important;
+    line-height: 1.8rem !important;
+    background: var(--gg-black) !important;
+    color: var() !important;
+}
