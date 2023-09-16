@@ -1,0 +1,73 @@
+/***  Hide native tabs strip when sidebar is open ***/
+
+/* Title Bar */
+
+/* TODO: Remove flicker of the window commands when going from normal -> hidden */
+
+#main-window #titlebar {
+    overflow: hidden;
+    transition: height 0.3s 0.3s ease-in-out !important;
+    /* Set initial height to enable animation */
+    height: 3em !important;
+}
+/* Tablet Mode Compatibility */
+#main-window[uidensity="touch"] #titlebar {
+    height: 3.35em !important;
+}
+/* Compact Mode Compatibility */
+#main-window[uidensity="compact"] #titlebar {
+    height: 2.7em !important;
+}
+/* Hidden state: Hide native tabs strip */
+#main-window[titlepreface*="[S]"] #titlebar {
+    height: 0 !important;
+}
+/* Hidden state: Fix z-index of active pinned tabs */
+#main-window[titlepreface*="[S]"] #tabbrowser-tabs {
+    z-index: 0 !important;
+}
+
+#main-window #toolbar-items {
+    transition: all 0.3s 0.3s ease-in-out !important;
+}
+
+/* Address Bar */
+
+#nav-bar {
+    border-inline: 0px solid var(--toolbar-bgcolor);
+    border-inline-style: solid !important;
+    transition: border-inline-width 0.3s 0.3s ease-in-out !important;
+}
+/* When Title Bar is hidden, make space for window controls */
+#main-window[titlepreface*="[S]"] #nav-bar {
+    border-right-width: 137px;
+}
+
+/* .toolbar-items {
+    transition: width 0.3s 0.3s ease-in-out !important;
+} */
+
+#main-window[titlepreface*="[S]"] #TabsToolbar > .titlebar-buttonbox-container {
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    height: 40px;
+}
+
+#main-window[titlepreface*="[S]"] #navigator-toolbox {
+    position: relative;
+}
+
+/* FULLSCREEN WINDOW CONTROLS FIX */
+/* 
+#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container {
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    right: 0;
+    height: 40px;
+}
+
+#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #navigator-toolbox {
+    position: relative;
+} */

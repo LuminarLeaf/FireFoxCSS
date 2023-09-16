@@ -1,0 +1,31 @@
+#main-window {
+    --arrowpanel-menuitem-border-radius: 5px !important;
+}
+
+menupopup {
+    --panel-border-radius: 10px !important;
+}
+
+/* Add rounded corners and padding to the context menu */
+menupopup > menuitem,
+menupopup > menu {
+    margin: 0 4px;
+    border-radius: var(--arrowpanel-menuitem-border-radius);
+}
+
+#context-navigation {
+    padding-inline: 4px;
+}
+
+#context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
+    border-radius: var(--arrowpanel-menuitem-border-radius);
+}
+
+/* Email Image... */
+#context-sendimage, #context-sendvideo,
+/* Set Image as Desktop Background... (and preceding separator) */
+#context-sep-setbackground, #context-setDesktopBackground,
+/* Inspect Accessibility Properties */
+#context-inspect-a11y {
+    display: none !important;
+}

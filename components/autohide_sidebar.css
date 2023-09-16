@@ -1,0 +1,28 @@
+/* Firefox CSS to autohide Sidebery sidebar when mouse isnt over it */
+
+/* set initial width to just show icons to enable animation */
+/*
+#sidebar-header {
+  width: 3em !important;
+}
+
+#sidebar-header:hover {
+  width: 15em !important;
+}
+
+#sidebar-header:hover #sidebar-title {
+  opacity: 1 !important;
+}
+
+#sidebar-header:hover #sidebar-close {
+  opacity: 1 !important;
+}
+
+#sidebar-header:hover #sidebar-splitter {
+  width: 2px !important;
+}
+
+#sidebar-header:hover #sidebar-splitter:hover {
+  width: 5px !important;
+}
+*/
