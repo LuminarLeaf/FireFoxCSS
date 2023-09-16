@@ -1,0 +1,34 @@
+/***  Hide native tabs strip when sidebar is open ***/
+
+#main-window {
+    --uc-toolbar-height: 40px;
+    --uc-window-control-width: 137px;
+}
+
+#main-window[titlepreface*="[S]"] #TabsToolbar {
+    visibility: collapse !important;
+}
+
+#main-window[titlepreface*="[S]"] #nav-bar {
+    border-inline: 0px solid var(--toolbar-bgcolor);
+    border-right-width: var(--uc-window-control-width);
+    border-inline-style: solid !important;
+}
+
+#main-window[titlepreface*="[S]"]:not([inFullscreen]) #nav-bar {
+    margin-top: calc(0px - var(--uc-toolbar-height, 0px));
+    transition: margin-top .3s ease-in-out !important;
+}
+
+#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container {
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    right: 0;
+    height: 40px;
+}
+
+#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #navigator-toolbox {
+    position: relative;
+}
+

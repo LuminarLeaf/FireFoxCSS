@@ -1,22 +1,25 @@
 /***  Hide native tabs strip when sidebar is open ***/
 
-/* Title Bar */
+#main-window {
+    --uc-toolbar-height: 3em;
+    --uc-window-control-width: 137px;
+}
 
-/* TODO: Remove flicker of the window commands when going from normal -> hidden */
+/* Title Bar */
 
 #main-window #titlebar {
     overflow: hidden;
     transition: height 0.3s 0.3s ease-in-out !important;
     /* Set initial height to enable animation */
-    height: 3em !important;
+    height: var(--uc-toolbar-height, 40px) !important;
 }
 /* Tablet Mode Compatibility */
 #main-window[uidensity="touch"] #titlebar {
-    height: 3.35em !important;
+    --uc-toolbar-height: 3.35em;
 }
 /* Compact Mode Compatibility */
 #main-window[uidensity="compact"] #titlebar {
-    height: 2.7em !important;
+    --uc-toolbar-height: 2.7em;
 }
 /* Hidden state: Hide native tabs strip */
 #main-window[titlepreface*="[S]"] #titlebar {
@@ -31,7 +34,7 @@
     transition: all 0.3s 0.3s ease-in-out !important;
 }
 
-/* Address Bar */
+/* Address bar */
 
 #nav-bar {
     border-inline: 0px solid var(--toolbar-bgcolor);
@@ -43,31 +46,46 @@
     border-right-width: 137px;
 }
 
-/* .toolbar-items {
-    transition: width 0.3s 0.3s ease-in-out !important;
-} */
+/* Window Controls */
 
 #main-window[titlepreface*="[S]"] #TabsToolbar > .titlebar-buttonbox-container {
     visibility: visible;
     position: absolute;
+    display: flex;
     right: 0;
-    height: 40px;
+    height: var(--uc-toolbar-height, 0px);
 }
 
 #main-window[titlepreface*="[S]"] #navigator-toolbox {
     position: relative;
 }
 
-/* FULLSCREEN WINDOW CONTROLS FIX */
-/* 
-#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container {
-    visibility: visible;
-    position: absolute;
-    display: flex;
-    right: 0;
-    height: 40px;
+/* Menu Bar */
+
+#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"] {
+    height: var(--uc-toolbar-height, 0px) !important;
+    position: relative;
 }
 
-#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #navigator-toolbox {
-    position: relative;
-} */
+#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="false"] {
+    margin-bottom: var(--uc-toolbar-height, 0px);
+}
+
+/* Make the menu bar inline with the navigation bar and add some pretty fade out */
+#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"] #main-menubar {
+    flex: 1;
+    background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
+    background-clip: padding-box;
+    border-right: 30px solid transparent;
+    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
+}
+
+#main-window[titlepreface*="[S]"] #toolbar-menubar:not([inactive]) {
+    z-index: 2;
+}
+
+/* Enable dragging if menu bar is inactive */
+#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+    opacity: 0;
+    pointer-events: none;
+}
