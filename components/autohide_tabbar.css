@@ -4,6 +4,14 @@
     --uc-toolbar-height: 3em;
     --uc-window-control-width: 137px;
 }
+/* Tablet Mode Compatibility */
+#main-window[uidensity="touch"] {
+    --uc-toolbar-height: 3.35em;
+}
+/* Compact Mode Compatibility */
+#main-window[uidensity="compact"] {
+    --uc-toolbar-height: 2.7em;
+}
 
 /* Title Bar */
 
@@ -12,14 +20,6 @@
     transition: height 0.3s 0.3s ease-in-out !important;
     /* Set initial height to enable animation */
     height: var(--uc-toolbar-height, 40px) !important;
-}
-/* Tablet Mode Compatibility */
-#main-window[uidensity="touch"] #titlebar {
-    --uc-toolbar-height: 3.35em;
-}
-/* Compact Mode Compatibility */
-#main-window[uidensity="compact"] #titlebar {
-    --uc-toolbar-height: 2.7em;
 }
 /* Hidden state: Hide native tabs strip */
 #main-window[titlepreface*="[S]"] #titlebar {
