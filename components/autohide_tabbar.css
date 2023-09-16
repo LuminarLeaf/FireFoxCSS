@@ -15,35 +15,35 @@
 
 /* Title Bar */
 
-#main-window #titlebar {
-    overflow: hidden;
-    transition: height 0.3s 0.3s ease-in-out !important;
-    /* Set initial height to enable animation */
-    height: var(--uc-toolbar-height, 40px) !important;
-}
-/* Hidden state: Hide native tabs strip */
-#main-window[titlepreface*="[S]"] #titlebar {
-    height: 0 !important;
-}
-/* Hidden state: Fix z-index of active pinned tabs */
-#main-window[titlepreface*="[S]"] #tabbrowser-tabs {
-    z-index: 0 !important;
+#main-window[titlepreface*="[S]"] #TabsToolbar {
+    visibility: collapse !important;
 }
 
-#main-window #toolbar-items {
-    transition: all 0.3s 0.3s ease-in-out !important;
+#main-window[titlepreface*="[S]"]:not([inFullscreen]) #nav-bar {
+    margin-top: calc(0px - var(--uc-toolbar-height, 0px));
+    transition: margin-top 0.3s ease-in-out !important;
 }
 
 /* Address bar */
 
-#nav-bar {
+#main-window #nav-bar {
     border-inline: 0px solid var(--toolbar-bgcolor);
     border-inline-style: solid !important;
-    transition: border-inline-width 0.3s 0.3s ease-in-out !important;
+    border-right-width: 0px ;
+    transition: border-right-width 0.3s 0.3s ease-in-out !important;
+    transition: margin-top 0.3s ease-in-out !important;
 }
-/* When Title Bar is hidden, make space for window controls */
+
 #main-window[titlepreface*="[S]"] #nav-bar {
     border-right-width: 137px;
+}
+
+#main-window:not([inFullscreen]) #nav-bar {
+    margin-top: 0;
+}
+
+#main-window[titlepreface*="[S]"]:not([inFullscreen]) #nav-bar {
+    margin-top: calc(0px - var(--uc-toolbar-height, 0px));
 }
 
 /* Fullscreen Window Controls */
