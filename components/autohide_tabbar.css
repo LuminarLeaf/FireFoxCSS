@@ -46,9 +46,9 @@
     border-right-width: 137px;
 }
 
-/* Window Controls */
+/* Fullscreen Window Controls */
 
-#main-window[titlepreface*="[S]"] #TabsToolbar > .titlebar-buttonbox-container {
+#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container {
     visibility: visible;
     position: absolute;
     display: flex;
@@ -56,36 +56,8 @@
     height: var(--uc-toolbar-height, 0px);
 }
 
-#main-window[titlepreface*="[S]"] #navigator-toolbox {
+#main-window[titlepreface*="[S]"][sizemode="fullscreen"] #navigator-toolbox {
     position: relative;
 }
 
-/* Menu Bar */
-
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"] {
-    height: var(--uc-toolbar-height, 0px) !important;
-    position: relative;
-}
-
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="false"] {
-    margin-bottom: var(--uc-toolbar-height, 0px);
-}
-
-/* Make the menu bar inline with the navigation bar and add some pretty fade out */
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"] #main-menubar {
-    flex: 1;
-    background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
-    background-clip: padding-box;
-    border-right: 30px solid transparent;
-    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
-}
-
-#main-window[titlepreface*="[S]"] #toolbar-menubar:not([inactive]) {
-    z-index: 2;
-}
-
-/* Enable dragging if menu bar is inactive */
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
-    opacity: 0;
-    pointer-events: none;
-}
+@import url("menubar.css");
