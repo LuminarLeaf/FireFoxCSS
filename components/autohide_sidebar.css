@@ -1,28 +1,36 @@
-/* Firefox CSS to autohide Sidebery sidebar when mouse isnt over it */
-
-/* set initial width to just show icons to enable animation */
-/*
-#sidebar-header {
-  width: 3em !important;
+/* show sidebar when hover */
+#sidebar-box {
+    --uc-sidebar-width: 48px;
+    --uc-sidebar-hover-width: 300px;
+    --uc-autohide-sidebar-delay: 0.6s;
+    width: var(--uc-sidebar-width) !important;
+    min-width: var(--uc-sidebar-width) !important;
+    max-width: var(--uc-sidebar-width) !important;
+    position: relative;
+    z-index: 1;
 }
 
-#sidebar-header:hover {
-  width: 15em !important;
+#sidebar {
+    /* cubic-bezier(.15, .36, .3, 1) */
+    transition: min-width 0.2s ease-in-out var(--uc-autohide-sidebar-delay) !important;
+    min-width: var(--uc-sidebar-width) !important;
 }
 
-#sidebar-header:hover #sidebar-title {
-  opacity: 1 !important;
+#sidebar-box:hover > #sidebar {
+    min-width: var(--uc-sidebar-hover-width) !important;
+    transition-delay: 0.5s !important;
+    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
 }
 
-#sidebar-header:hover #sidebar-close {
-  opacity: 1 !important;
+#sidebar {
+    border-inline: 1px solid var(--toolbar-field-background-color);
+    border-inline-width: 0px 1px;
 }
 
-#sidebar-header:hover #sidebar-splitter {
-  width: 2px !important;
+#sidebar-box[positionend] > * {
+    border-inline-width: 1px 0px;
 }
 
-#sidebar-header:hover #sidebar-splitter:hover {
-  width: 5px !important;
+#main-window[sizemode="fullscreen"] #sidebar-box {
+    --uc-sidebar-width: 1px;
 }
-*/

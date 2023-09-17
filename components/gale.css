@@ -1,14 +1,7 @@
-
 @import url("darkTheme.css");
 @import url("private.css");
 
 /* --- TAB AND TITLE BAR --- */
-
-/* #TabsToolbar {
-    display: none !important;
-    height: 0 !important;
-}
-*/
 
 .content-header {
     background: var(--gg-bg) !important;
@@ -28,11 +21,11 @@
     border-inline-color: var(--gg-bg);
 }
 
-#sidebar-box {
+/* #sidebar-box {
     margin-top: -1px;
     position: relative;
     z-index: 1;
-}
+} */
 
 #sidebar-box[positionend] {
     direction: rtl;
@@ -121,7 +114,7 @@
 #main-window[sizemode="fullscreen"] #sidebar-splitter {
     /* match the transition from the toolbar;
     swap to margin-right if you use the sidebar to the right */
-	transition: .8s margin-left ease-out !important;
+    transition: 0.8s margin-left ease-out !important;
     /* modify the size if you use a custom one */
     /* display: none !important; */
 }
