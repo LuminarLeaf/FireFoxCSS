@@ -1,5 +1,4 @@
-@-moz-document
-url-prefix(about:home),
+@-moz-document url-prefix(about:home),
 url-prefix(about:newtab) {
     .click-target-container *,
     .top-sites-list * {
@@ -12,9 +11,14 @@ url-prefix(about:newtab) {
         background-size: cover !important ;
     }
 
-    /* select class "tile" */
+    .search-handoff-button{
+        background-color: transparent !important;
+        backdrop-filter: blur(10px);
+    }
+
     .tile {
-        background-color: rgba(100, 100, 100, 0.50) !important ;
+        background-color: rgba(255, 255, 255, 0.1) !important ;
+        backdrop-filter: blur(10px);
         transition: transform 0.25s ease-in-out !important ;
     }
 
