@@ -1,3 +1,5 @@
+/* !IMPORTANT : use Sidebery v5 */
+
 #root.root {
     --nav-btn-width: 35px;
     --nav-btn-height: 35px;
@@ -63,7 +65,7 @@
 }
 
 /* The deeper the nested tabs, the dimmer the tab */
-
+/* currently doesnt work */
 .Tab {
     filter: opacity( calc( 1 - 0.2 * attr(data-lvl) ) );
 }

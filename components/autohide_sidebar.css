@@ -11,7 +11,6 @@
 }
 
 #sidebar {
-    /* cubic-bezier(.15, .36, .3, 1) */
     transition: min-width 0.2s ease-in-out var(--uc-autohide-sidebar-delay) !important;
     min-width: var(--uc-sidebar-width) !important;
 }

@@ -21,6 +21,7 @@ menupopup > menu {
     border-radius: var(--arrowpanel-menuitem-border-radius);
 }
 
+/* remove specific context menu entries */
 /* Email Image... */
 #context-sendimage, #context-sendvideo,
 /* Set Image as Desktop Background... (and preceding separator) */

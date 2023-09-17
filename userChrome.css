@@ -6,3 +6,10 @@
 .titlebar-spacer {
     display: none !important;
 }
+
+/* Rounded browser */
+#appcontent {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1px;
+}
