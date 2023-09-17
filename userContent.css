@@ -1,0 +1,34 @@
+@-moz-document
+url-prefix(about:home),
+url-prefix(about:newtab) {
+    .click-target-container *,
+    .top-sites-list * {
+        color: #fff !important ;
+        text-shadow: 2px 2px 2px #000 !important ;
+    }
+
+    body {
+        background: url("/insert/your/own/url/here") !important ;
+        background-size: cover !important ;
+    }
+
+    /* select class "tile" */
+    .tile {
+        background-color: rgba(100, 100, 100, 0.50) !important ;
+    }
+
+    .top-site-outer {
+        background-color: rgba(0, 0, 0, 0) !important ;
+    }
+
+    .top-site-outer:hover {
+        background-color: rgba(65, 65, 65, 0.33) !important ;
+    }
+
+    .top-site-icon {
+        background-color: rgba(0, 0, 0, 0) !important ;
+        width: 100% !important ;
+        height: 100% !important ;
+        background-size: cover !important ;
+    }
+}
