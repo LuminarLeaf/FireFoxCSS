@@ -15,14 +15,20 @@ url-prefix(about:newtab) {
     /* select class "tile" */
     .tile {
         background-color: rgba(100, 100, 100, 0.50) !important ;
+        transition: transform 0.25s ease-in-out !important ;
     }
 
     .top-site-outer {
         background-color: rgba(0, 0, 0, 0) !important ;
+        transition: background-color 0.25s ease-in-out !important;
     }
 
     .top-site-outer:hover {
         background-color: rgba(65, 65, 65, 0.33) !important ;
+    }
+
+    .top-site-outer:hover .tile {
+        transform: scale(1.1) !important ;
     }
 
     .top-site-icon {
