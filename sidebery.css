@@ -14,15 +14,6 @@
     padding-right: 4px;
 }
 
-.Tab[data-parent="true"] .title {
-    font-weight: bold;
-}
-
-/* Dont bold tabs with children */
-.Tab[data-parent="true"] .title {
-    font-weight: normal !important;
-}
-
 /* Flatten tree when sidebar is collapsed  */
 @media screen and (max-width: 50px) {
     #root {
