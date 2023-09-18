@@ -13,3 +13,7 @@
     overflow: hidden;
     margin: 1px 0px 1px 1px;
 }
+
+* {
+    font-family: "Inter", sans-serif !important;
+}
