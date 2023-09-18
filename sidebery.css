@@ -66,3 +66,16 @@
 /* .Tab {
     filter: opacity( calc( 1 - 0.2 * attr(data-lvl) ) );
 } */
+
+.Tab[data-audible="true"] .audio {
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    top: 0px;
+    left: 14px;
+    border-radius: 50%;
+}
+
+.Tab[data-audible="true"] .t-box {
+    --audio-btn-offset: 0px;
+}
