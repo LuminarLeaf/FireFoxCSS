@@ -8,6 +8,8 @@ url-prefix(about:newtab) {
 
     body {
         background: url("/insert/your/own/url/here") !important ;
+        background-size: cover !important;
+        background-position: center !important;
         background-size: cover !important ;
     }
 

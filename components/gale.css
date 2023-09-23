@@ -1,5 +1,9 @@
-@import url("darkTheme.css");
+/* @import url("darkTheme.css"); */
 @import url("private.css");
+
+#main-window[lwtheme-mozlightdark][lwthemetextcolor="dark"] {
+    @import url("darkTheme.css");
+}
 
 /* --- TAB AND TITLE BAR --- */
 

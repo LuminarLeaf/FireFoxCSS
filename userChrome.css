@@ -8,10 +8,10 @@
 }
 
 /* Rounded browser */
-#appcontent {
+#main-window:not([sizemode="fullscreen"]) #appcontent {
     border-radius: 10px;
     overflow: hidden;
-    margin: 1px 0px 1px 1px;
+    margin-top: 1px;
 }
 
 * {
