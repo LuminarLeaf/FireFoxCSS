@@ -11,6 +11,7 @@
     --ctx-menu-font: 0.875rem inter;
     --bookmarks-bookmark-font: 0.9375rem inter;
     --bookmarks-folder-font: 0.9375rem inter;
+    --button-n-tab-colour: rgb(0,0,0,0);
 }
 
 .TabsPanel,
@@ -72,7 +73,7 @@
 }
 
 /* image behind sideabar? */
-/* .panel-box .scrollable::before {
+.main-box::before {
     content: "";
     display: block;
     position: absolute;
@@ -81,21 +82,25 @@
     width: 100%;
     height: 100%;
     opacity: 0.6;
-    background-image: url("/image/location");
+    background-image: url("/image/location"); /* change this to your image location or a gradient */
+    /* no blur(on tabs n buttons) with gradient tho ;-; */
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
 }
 
-.Tab .body {
-    background-color: none !important;
-    backdrop-filter: blur(10px);
+/* the next 3 rules just make the tabs look nice when u got image behind them */
+.Tab .body, .new-tab-btn, .tool-btn {
+    background-color: var(--button-n-tab-colour) !important;
+    backdrop-filter: blur(5px);
 }
 
 .Tab[data-active="true"] .body {
-    background-color: transparent !important;
+    background-color: var(--button-n-tab-colour) !important;
+    filter: brightness(1.5);
 }
 
-.bottom-space {
-    background-color: rgb(0, 0, 0, 0) !important;
-} */
+.bottom-space, .PinnedTabsBar,
+.new-tab-btns, .new-tab-btns::after {
+    background-color: transparent !important;
+}
