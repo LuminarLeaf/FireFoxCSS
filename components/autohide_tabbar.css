@@ -22,11 +22,11 @@
     height: var(--uc-toolbar-height, 40px) !important;
 }
 /* Hidden state: Hide native tabs strip */
-#main-window[titlepreface*="[S]"] #titlebar {
+#main-window[titlepreface="[S]"] #titlebar {
     height: 0 !important;
 }
 /* Hidden state: Fix z-index of active pinned tabs */
-#main-window[titlepreface*="[S]"] #tabbrowser-tabs {
+#main-window[titlepreface="[S]"] #tabbrowser-tabs {
     z-index: 0 !important;
 }
 
@@ -42,13 +42,13 @@
     transition: border-inline-width 0.3s 0.3s ease-in-out !important;
 }
 /* When Title Bar is hidden, make space for window controls */
-#main-window[titlepreface*="[S]"] #nav-bar {
+#main-window[titlepreface="[S]"] #nav-bar {
     border-right-width: 137px;
 }
 
 /* Window Controls */
 
-#main-window[titlepreface*="[S]"] #TabsToolbar > .titlebar-buttonbox-container {
+#main-window[titlepreface="[S]"] #TabsToolbar > .titlebar-buttonbox-container {
     visibility: visible;
     position: absolute;
     display: flex;
@@ -56,23 +56,23 @@
     height: var(--uc-toolbar-height, 0px);
 }
 
-#main-window[titlepreface*="[S]"] #navigator-toolbox {
+#main-window[titlepreface="[S]"] #navigator-toolbox {
     position: relative;
 }
 
 /* Menu Bar */
 
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"] {
+#main-window[titlepreface="[S]"] #toolbar-menubar[autohide="true"] {
     height: var(--uc-toolbar-height, 0px) !important;
     position: relative;
 }
 
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="false"] {
+#main-window[titlepreface="[S]"] #toolbar-menubar[autohide="false"] {
     margin-bottom: var(--uc-toolbar-height, 0px);
 }
 
 /* Make the menu bar inline with the navigation bar and add some pretty fade out */
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"] #main-menubar {
+#main-window[titlepreface="[S]"] #toolbar-menubar[autohide="true"] #main-menubar {
     flex: 1;
     background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
     background-clip: padding-box;
@@ -80,12 +80,12 @@
     border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
 }
 
-#main-window[titlepreface*="[S]"] #toolbar-menubar:not([inactive]) {
+#main-window[titlepreface="[S]"] #toolbar-menubar:not([inactive]) {
     z-index: 2;
 }
 
 /* Enable dragging if menu bar is inactive */
-#main-window[titlepreface*="[S]"] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+#main-window[titlepreface="[S]"] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
     opacity: 0;
     pointer-events: none;
 }

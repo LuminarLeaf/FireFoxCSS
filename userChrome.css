@@ -9,9 +9,16 @@
 
 /* Rounded browser */
 #main-window:not([sizemode="fullscreen"]) #appcontent {
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    margin-top: 1px;
+}
+
+#main-window:not([sizemode="fullscreen"]):not([sizemode="maximized"]) #appcontent {
+    margin: 1px 3px 3px 1px;
+}
+
+#main-window[sizemode="maximized"] #appcontent {
+    margin: 1px 0px 1px 1px;
 }
 
 * {

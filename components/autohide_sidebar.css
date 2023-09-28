@@ -33,3 +33,7 @@
 #main-window[sizemode="fullscreen"] #sidebar-box {
     --uc-sidebar-width: 1px;
 }
+
+#sidebar-splitter {
+    display: none !important;
+}
