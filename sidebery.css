@@ -60,7 +60,7 @@
 }
 
 .Tab[data-audible="true"] .audio {
-    background-color: black;
+    /* background-color: black; */
     height: 15px;
     width: 15px;
     top: 0px;

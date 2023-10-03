@@ -44,3 +44,10 @@ url-prefix(about:newtab) {
         background-size: cover !important ;
     }
 }
+
+/* dark blank tab */
+@-moz-document url(about:blank), url(about:newtab) {
+    #newtab-window, html:not(#ublock0-epicker) {
+        background: #222 !important;
+    }
+}

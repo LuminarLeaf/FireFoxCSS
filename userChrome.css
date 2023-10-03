@@ -13,14 +13,23 @@
     overflow: hidden;
 }
 
-#main-window:not([sizemode="fullscreen"]):not([sizemode="maximized"]) #appcontent {
-    margin: 1px 3px 3px 1px;
+#main-window:not([sizemode="fullscreen"]):not([sizemode="maximized"])
+    #appcontent {
+    margin: 0px 3px 3px 0px;
 }
 
 #main-window[sizemode="maximized"] #appcontent {
-    margin: 1px 0px 1px 1px;
+    margin: 0px 0px 1px 0px;
 }
 
 * {
     font-family: "Inter", sans-serif !important;
+}
+
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type="content-primary"],
+browser[type="content"] > html {
+    background: #222 !important;
 }

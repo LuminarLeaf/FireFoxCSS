@@ -1,3 +1,8 @@
+/* add Scroll space to the left of the url bar */
+#nav-bar #urlbar-container {
+    margin-left: 75px !important;
+}
+
 /***  Hide native tabs strip when sidebar is open ***/
 
 #main-window {
