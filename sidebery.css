@@ -17,7 +17,7 @@
 .TabsPanel,
 .bookmarks-tree {
     padding-left: 5px;
-    padding-right: 4px;
+    padding-right: 5px;
 }
 
 /* Flatten tree when sidebar is collapsed  */
@@ -28,8 +28,8 @@
     }
 
     .TabsPanel {
-        padding-left: 3px;
-        padding-right: 3px;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 
     /* Hide static buttons to prevent obstructing the panel icons */

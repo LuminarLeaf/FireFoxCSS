@@ -93,11 +93,8 @@
     margin-left: -8px;
 }
 
-/* #sidebar-splitter {
-    width: 0px !important;
-    border: 2px solid var(--gg-bg) !important;
-} */
 
+/* NOTE: Disabling this somehow breaks the sidebar */
 /* Add outline border */
 #sidebar,
 #sidebar-header {
@@ -109,19 +106,9 @@
     border-inline-width: 4px 0px;
 }
 
-#appcontent {
+/* #appcontent {
     margin-top: -1px;
-}
-
-/* hide on fullscreen */
-#main-window[sizemode="fullscreen"] #sidebar-box /*,
-#main-window[sizemode="fullscreen"] #sidebar-splitter */ {
-    /* match the transition from the toolbar;
-    swap to margin-right if you use the sidebar to the right */
-    transition: 0.8s margin-left ease-out !important;
-    /* modify the size if you use a custom one */
-    /* display: none !important; */
-}
+} */
 
 #search-box {
     appearance: none !important;

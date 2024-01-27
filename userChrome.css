@@ -9,17 +9,30 @@
 
 /* Rounded browser */
 #main-window:not([sizemode="fullscreen"]) #appcontent {
-    border-radius: 5px;
+    border-radius: 7px;
     overflow: hidden;
 }
 
-#main-window:not([sizemode="fullscreen"]):not([sizemode="maximized"])
+#main-window[titlepreface="[S]"]:not([sizemode="fullscreen"]):not([sizemode="maximized"])
     #appcontent {
-    margin: 0px 3px 3px 0px;
+    margin: 1px 3px 3px 0px !important;
 }
 
-#main-window[sizemode="maximized"] #appcontent {
-    margin: 0px 0px 1px 0px;
+#main-window:not([titlepreface="[S]"]):not([sizemode="fullscreen"]):not([sizemode="maximized"])
+    #appcontent {
+    margin: 1px 3px 3px 3px !important;
+}
+
+#main-window[sizemode="maximized"][titlepreface="[S]"]
+    #appcontent {
+    margin: 1px 0px 0px 0px !important;
+    border-radius: 7px 0px 0px 7px;
+}
+
+#main-window[sizemode="maximized"]:not([titlepreface="[S]"])
+    #appcontent {
+    margin: 1px 0px 0px 0px !important;
+    border-radius: 0px;
 }
 
 * {
@@ -31,5 +44,5 @@
 #tabbrowser-tabpanels,
 browser[type="content-primary"],
 browser[type="content"] > html {
-    background: #222 !important;
+    background: #1e1e2e !important;
 }

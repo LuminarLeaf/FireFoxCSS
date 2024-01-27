@@ -1,3 +1,5 @@
+/* TODO: Fix history and bookmarks sidebar */
+
 /* show sidebar when hover */
 #sidebar-box {
     --uc-sidebar-width: 48px;
@@ -32,6 +34,7 @@
 
 #main-window[sizemode="fullscreen"] #sidebar-box {
     --uc-sidebar-width: 1px;
+    transition: 0.8s margin-left ease-out !important;
 }
 
 #sidebar-splitter {
