@@ -4,7 +4,7 @@
 #sidebar-box {
     --uc-sidebar-width: 48px;
     --uc-sidebar-hover-width: 300px;
-    --uc-autohide-sidebar-delay: 0.6s;
+    --uc-autohide-sidebar-delay: 1s;
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
     max-width: var(--uc-sidebar-width) !important;
@@ -13,8 +13,13 @@
 }
 
 #sidebar {
-    transition: min-width 0.2s ease-in-out var(--uc-autohide-sidebar-delay) !important;
+    /* start 1s after hover but immediately after removing hover */
+    transition: min-width 0.2s ease-in-out 0s !important;
     min-width: var(--uc-sidebar-width) !important;
+}
+
+#sidebar:hover {
+    transition: min-width 0.2s ease-in-out --var(--uc-autohide-sidebar-delay) !important;
 }
 
 #sidebar-box:hover > #sidebar {
