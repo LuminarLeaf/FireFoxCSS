@@ -236,8 +236,11 @@ Navigation bar on top of the window
   }
   
   /* hotfix */
-  #urlbar{
-    visibility: collapse;
+  #urlbar {
+    /*visibility: collapse;*/
+    opacity: 0;
+    position: fixed !important;
+    transition: var(--transition);
   }
 
   #urlbar-container::before {
@@ -262,9 +265,11 @@ Navigation bar on top of the window
     #nav-bar{
       
       /* hotfix */
-      #urlbar{
-        visibility: visible !important;
-        transition: visibility 0s linear var(--trans-dur);
+      #urlbar {
+        /*visibility: visible !important;*/
+        /*transition: visibility 0s linear var(--trans-dur);*/
+        opacity: 100 !important;
+        transition: all 0s linear var(--transition);
         min-width: var(--urlbar-width) !important;
       }
 
