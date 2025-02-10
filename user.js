@@ -36,16 +36,8 @@ user_pref("browser.urlbar.suggest.calculator", true);
 // Integrated unit convertor at urlbar
 user_pref("browser.urlbar.unitConversion.enabled", true);
 
-// // ArcWTF specific settings
-// user_pref("uc.tweak.context-menu.hide-firefox-account", true);
-// // user_pref("uc.tweak.hide-forward-button", true);
-// user_pref("uc.tweak.longer-sidebar", true);
-// user_pref("uc.tweak.newtab-background", true);
-// user_pref("uc.tweak.popup-search", true);
-
-// ShyFox specific settings
+// TextFox specific settings
 user_pref("sidebar.revamp", false);
-user_pref("shyfox.larger.context.menu", true);
 user_pref("shyfox.enable.ext.mono.toolbar.icons", true);
 user_pref("shyfox.enable.ext.mono.context.icons", true);
 user_pref("shyfox.enable.context.menu.icons", true);
