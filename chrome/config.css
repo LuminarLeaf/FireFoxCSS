@@ -1,0 +1,13 @@
+:root {
+  --tf-font-family: "Monaspace Neon", "MonaspiceNe Nerd Font" Consolas,
+    monospace; /* Font family of config */
+  --tf-border-width: 2px; /* Width of borders */
+  --tf-rounding: 8px; /* Border radius used through out the config */
+  --tf-margin: 0.4rem; /* Margin used between elements in sidebery */
+  --tf-display-nav-buttons: flex; /* If the navigation buttons (back, forward) should be shown, none = hidden, flex = shown */
+  --tf-display-urlbar-icons: flex; /* If the icons inside the url bar should be shown, none = hidden, flex = shown */
+  --tf-display-sidebar-tools: none; /* If the "Customize sidebar" button on the sidebar should be shown, none = hidden, flex = shown */
+  --tf-display-titles: none; /* If titles (tabs, navbar, main etc.) should be shown, none = hidden, flex = shown */
+  --tf-accent: #b392da;
+  --tf-border: #313244;
+}
