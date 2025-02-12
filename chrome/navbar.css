@@ -48,6 +48,9 @@
 
 #navigator-toolbox {
   border-bottom: var(--border-width) !important;
+  border-top-left-radius: env(-moz-gtk-csd-titlebar-radius) !important;
+  border-top-right-radius: env(-moz-gtk-csd-titlebar-radius) !important;
+  overflow: hidden;
 }
 
 #nav-bar {
@@ -58,6 +61,7 @@
   border-width: var(--border-width);
   border-color: var(--tf-border) !important;
   border-radius: var(--tf-rounding);
+  background-color: var(--toolbox-bgcolor) !important;
   transition: border-color var(--tf-border-transition) !important;
   &:hover,
   &:focus {
@@ -87,6 +91,7 @@
   border-width: var(--border-width);
   border-color: var(--tf-border) !important;
   border-radius: var(--tf-rounding);
+  background-color: var(--toolbox-bgcolor) !important;
   transition: border-color var(--tf-border-transition) !important;
   &:hover,
   &:focus {

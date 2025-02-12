@@ -8,6 +8,11 @@ browser {
 
 #browser {
   background-image: unset !important;
+  background-color: var(--tf-bg) !important;
+}
+
+.browser-toolbox-background {
+  background-color: var(--tf-bg) !important;
 }
 
 #tabbrowser-tabbox {
@@ -15,7 +20,7 @@ browser {
   border: var(--border-width) solid var(--tf-border);
   border-radius: var(--tf-rounding);
   /*padding: 8px !important;*/
-  overflow: hidden;
+  overflow: hidden !important;
   transition: border-color var(--tf-border-transition);
   &:hover {
     border-color: var(--tf-accent) !important;

@@ -13,4 +13,4 @@ Currently using a custom ver of [TextFox](https://github.com/adriankarlen/textfo
 - [x] fix gtk border clipping
 - [ ] New Tab Customization
   - [ ] Shortcuts
-  - [ ] Wallpapers
+  - [x] Wallpapers

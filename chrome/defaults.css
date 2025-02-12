@@ -1,3 +1,11 @@
+/*DO NOT EDIT, either create a config.css or edit the one already there and do something like the following in it*/
+/*
+:root {
+  --tf-border-width: 2px; 
+  --tf-rounding: 8px; 
+  --tf-margin: 0.4rem; 
+}
+*/
 :root {
   --tf-font-family: "SF Mono", Consolas, monospace; /* Font family of config */
   --tf-font-size: 14px; /* Font size of config */

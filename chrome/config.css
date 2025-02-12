@@ -8,6 +8,7 @@
   --tf-display-urlbar-icons: flex; /* If the icons inside the url bar should be shown, none = hidden, flex = shown */
   --tf-display-sidebar-tools: none; /* If the "Customize sidebar" button on the sidebar should be shown, none = hidden, flex = shown */
   --tf-display-titles: none; /* If titles (tabs, navbar, main etc.) should be shown, none = hidden, flex = shown */
-  --tf-accent: #b392da;
-  --tf-border: #313244;
+  --tf-accent: #cba6f7;
+  /*--tf-bg: #1d1d2e;*/
+  /*--tf-border: #313244;*/
 }

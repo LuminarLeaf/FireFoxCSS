@@ -10,7 +10,7 @@
 .urlbarView {
   text-align: start;
   margin-top: 4px;
-  background-color: var(--tf-bg);
+  background-color: var(--toolbox-bgcolor) !important;
   border: var(--border-width) solid var(--tf-accent) !important;
   border-radius: 0 0 var(--tf-rounding) var(--tf-rounding);
 }
