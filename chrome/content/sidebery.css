@@ -43,6 +43,10 @@ Styles for Sidebery extension
     --status-notice: var(--s-toolbar-fg) !important;
   }
 
+  .top-horizontal-box {
+    margin-top: var(--general-margin);
+  }
+
   /*
    * ─[ pinned tabs ]──────────────────────────────────────────────────────
   */
@@ -145,12 +149,7 @@ Styles for Sidebery extension
 
   /* padding */
   #nav_bar {
-    padding-top: var(--nav-btn-margin) !important;
-    padding-bottom: var(--general-margin) !important;
-  }
-
-  .BottomBar {
-    padding: var(--nav-btn-margin) !important;
+    padding: 0 !important;
   }
 
   /* popup */
@@ -192,5 +191,12 @@ Styles for Sidebery extension
       top: calc(var(--tf-rounding) / 4 + 3px) !important;
       right: calc(var(--tf-rounding) / 4 + 3px) !important;
     }
+  }
+
+  /* context menu */
+  .CtxMenu .icon-opt,
+  .CtxMenu .opt {
+    border-radius: calc(var(--tf-rounding) / 2) !important;
+    overflow: clip !important;
   }
 } /* wrap end */

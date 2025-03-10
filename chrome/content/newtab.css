@@ -1,4 +1,14 @@
 @-moz-document url("about:home"), url("about:newtab") {
+  /*wallpaper*/
+  :root[lwt-newtab-brighttext] body {
+    background-image: url("../wallpaper.png") !important;
+  }
+
+  /* light wallpaper */ /* `wallpaper.png` will be used when `-light` one does not exist */
+  :root:not([lwt-newtab-brighttext]) body {
+    background-image: url("../wallpaper-light.png"), url("../wallpaper.png") !important;
+  }
+
   body {
     &.lightWallpaper {
       color-scheme: light !important;
@@ -51,6 +61,7 @@
       border: var(--border-width) solid var(--newtab-border-color) !important;
       border-radius: var(--tf-rounding) !important;
       box-shadow: none !important;
+      backdrop-filter: blur(1rem) !important;
       &:hover {
         background-color: var(--newtab-element-hover-color) !important;
       }
@@ -63,6 +74,7 @@
       box-shadow: none !important;
       border-radius: var(--tf-rounding) !important;
       border: var(--border-width) solid var(--newtab-border-color) !important;
+      backdrop-filter: blur(1rem) !important;
       &:hover {
         background-color: var(--newtab-element-hover-color) !important;
       }

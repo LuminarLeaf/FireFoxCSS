@@ -66,17 +66,16 @@
       content: "tools";
       color: var(--lwt-text-color);
       background-color: var(--tf-bg);
-      margin: -1rem 0.75rem 0rem;
+      margin: -1rem .75rem 0rem;
       padding: 0 4px;
     }
     &:hover::before {
       color: var(--tf-accent);
     }
   }
-  #tabbrowser-tabs[orient="vertical"] {
-    &:not([expanded]) {
-      #vertical-pinned-tabs-container,
-      .tab-stack {
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+      #vertical-pinned-tabs-container, .tab-stack {
         width: 100% !important;
       }
     }

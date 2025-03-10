@@ -13,7 +13,7 @@ box#vertical-tabs {
     content: "tabs";
     background-color: var(--tf-bg);
     position: absolute;
-    margin: -1.75rem 0.75rem;
+    margin: -1.75rem .75rem;
     padding: 0 2px;
   }
   &:hover::before {
@@ -47,7 +47,7 @@ box#vertical-tabs {
     content: "tabs";
     background-color: var(--tf-bg);
     position: absolute;
-    margin: -1rem 0.75rem;
+    margin: -1rem .75rem;
     padding: 0 2px;
   }
 

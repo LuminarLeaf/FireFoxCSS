@@ -23,9 +23,10 @@
   font-size: var(--tf-font-size);
 }
 
-body {
-  background-color: var(--tf-bg);
-}
+/*breaks gtk corners*/
+/*body {*/
+/*  background-color: var(--tf-bg);*/
+/*}*/
 
 ::placeholder {
   text-transform: lowercase;
