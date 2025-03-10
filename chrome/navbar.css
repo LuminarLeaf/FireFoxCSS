@@ -48,14 +48,11 @@
 
 #navigator-toolbox {
   border-bottom: var(--border-width) !important;
-  border-top-left-radius: env(-moz-gtk-csd-titlebar-radius) !important;
-  border-top-right-radius: env(-moz-gtk-csd-titlebar-radius) !important;
-  overflow: hidden;
 }
 
 #nav-bar {
-  margin: 8px 8px 2px;
-  padding: 4px !important;
+  margin: var(--tf-navbar-margin);
+  padding: var(--tf-navbar-padding) !important;
   border-top: var(--border-width) !important;
   border-style: solid !important;
   border-width: var(--border-width);
