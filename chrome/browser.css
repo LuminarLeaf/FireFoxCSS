@@ -22,6 +22,7 @@ browser {
   /*padding: 8px !important;*/
   overflow: hidden !important;
   transition: border-color var(--tf-border-transition);
+	clip-path: xywh(0 0 100% 100% round 8px);
   &:hover {
     border-color: var(--tf-accent) !important;
     &::before {
