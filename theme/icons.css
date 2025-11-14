@@ -590,6 +590,7 @@
     background-repeat: no-repeat !important;
     -moz-context-properties: fill, fill-opacity !important;
     fill: currentColor !important;
+    padding-left: 28px !important;
   }
 
   @media (-moz-platform: macos) {
